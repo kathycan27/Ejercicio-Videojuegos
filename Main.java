@@ -28,6 +28,8 @@ public class Main {
                     break;
                 case 5:
                     v.compareTo();
+                    //1
+                    // v.toString();
                     break;
                 case 6:
                     serie.compareTo();
