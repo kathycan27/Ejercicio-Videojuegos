@@ -12,11 +12,11 @@ public class Serie {
 
     public void ingresar()
     {
-        for(int i=0; i<1;i++) {
-            System.out.println("---------------Datos Serie" + (i + 1) + "---------------");
+        for(int i=0; i<5;i++) {
             series[i] = new Serie("",10," "," ");
+            System.out.println("---------------Datos Serie" + (i + 1) + "---------------");
             System.out.println("Cual es el titulo de la serie: ");
-            titulo = sc.nextLine();
+            titulo = sc.next();
             series[i].setTitulo(titulo);
             System.out.println("Numero de temporadas: ");
             numeroTemporadas = sc.nextInt();
@@ -41,7 +41,9 @@ public class Serie {
 
             System.out.println(" ----------- Serie "+(j+1)+"-----------");
             System.out.println("Titulo: "+series[j].getTitulo()+"\nNumero Temporadas: "+series[j].getNumeroTemporadas()+"\nGenero: "+series[j].getGenero()+"\nCreador: "+series[j].getCreador());
+
         }
+
     }
     public void entregar()
     {
@@ -65,6 +67,25 @@ public class Serie {
         System.out.println(entregado);
     }
 
+   public void compareTo() {
+       for (Serie serie :series ) {
+
+       }
+       int m=0;
+       int mayor = 0;
+       // Recorrer arreglo y ver si no es así
+       // (comenzar desde el 1 porque el 0 ya lo tenemos contemplado arriba)
+       for (int i = 0; i < 5; i++) {
+           if (series[i].getNumeroTemporadas() > series[mayor].getNumeroTemporadas()) {
+               mayor = i;
+           }
+           m = series[mayor].getNumeroTemporadas();
+
+
+           }
+       System.out.println("La serie con mas temporadas es: " + m + " De la serie "+ series[mayor].getTitulo());
+
+   }
     public String getTitulo() {
         return titulo;
     }

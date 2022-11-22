@@ -41,15 +41,24 @@ public class Videojuego {
             System.out.println("Titulo: "+videojuegos[j].getTitulos()+"\nNumero Horas: "+videojuegos[j].getHorasE()+"\nGenero: "+videojuegos[j].getGenero()+"\nCompañia: "+videojuegos[j].getCompania());
         }
     }
-    public void compareTo()
-    {
+    public void compareTo() {
         for (Videojuego videojuego :videojuegos ) {
 
         }
-        for(int k=0; k<5;k++)
-        {
+        int m=0;
+        int mayor = 0;
+        // Recorrer arreglo y ver si no es así
+        // (comenzar desde el 1 porque el 0 ya lo tenemos contemplado arriba)
+        for (int i = 0; i < 5; i++) {
+            if (videojuegos[i].getHorasE() > videojuegos[mayor].getHorasE()) {
+                mayor = i;
+            }
+            m = videojuegos[mayor].getHorasE();
+
 
         }
+        System.out.println("La serie con mas temporadas es: " + m + " De la serie "+ videojuegos[mayor].getTitulos());
+
     }
 public void entregar()
 {
